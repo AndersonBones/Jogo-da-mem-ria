@@ -176,3 +176,18 @@ footer a{
     text-decoration: none;
     color: #6dd5ed;
 }
+
+@media only screen and (max-width: 500px){
+    .tabuleiro-collumn button{
+        width: 70px;
+        height: 70px;
+    }
+
+    .tabuleiro-collumn button > i{
+        font-size: 3.4rem;
+    }
+
+    .tabuleiro-collumn button > span{
+        font-size: 3rem;
+    }
+}
