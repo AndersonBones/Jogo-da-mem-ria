@@ -89,6 +89,7 @@ main{
     width: 100%;
     height: 100%;
     visibility: hidden;
+    text-align: center;
     
     position: absolute;
     display: flex;
@@ -177,17 +178,26 @@ footer a{
     color: #6dd5ed;
 }
 
+
 @media only screen and (max-width: 500px){
     .tabuleiro-collumn button{
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 
     .tabuleiro-collumn button > i{
-        font-size: 3.4rem;
+        font-size: 3.6rem;
     }
 
     .tabuleiro-collumn button > span{
         font-size: 3rem;
     }
-}
+
+    footer p, a{
+        font-size: 1.3rem;
+    }
+
+    .game_over h2{
+        font-size: 1.5rem;
+    }
+}   
