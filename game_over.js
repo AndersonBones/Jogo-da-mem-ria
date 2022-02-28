@@ -35,5 +35,4 @@ function Restart(){
         Shuffle();
     }, 1000)
     
-   
 }
