@@ -1,11 +1,15 @@
-var squares = document.querySelectorAll("button");
+var squares = document.querySelectorAll(".square");
 
 for(var i=0; i<squares.length; i++){
     squares[i].addEventListener('click',Set_square);
+    
 }
 
 var players = [];
 var flip_players = [];
+var Flip = true;
+var Equal = false;
+var equal_total = 0;
 
 function Set_square(){
 
@@ -33,7 +37,6 @@ function Set_square(){
     
 }
 
-let Flip = true;
 function Show_square(players){
 
 
@@ -71,8 +74,7 @@ function Hide_square(players){
     
 }
 
-var Equal = false;
-var equal_total = 0;
+
 function Check_equality(players){
     let player1 = players[0];
     let player2 = players[1];
