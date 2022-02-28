@@ -1,4 +1,4 @@
-var square_list = document.querySelectorAll("button");
+var square_list = document.querySelectorAll(".square");
 var square_icons = ['<i class="devicon-css3-plain-wordmark colored"></i>', 
                      '<i class="devicon-electron-original colored"></i>',
                      '<i class="devicon-javascript-plain colored"></i>',
