@@ -12,18 +12,22 @@ game_over_container.appendChild(restart_btn);
 document.body.appendChild(game_over_container);
 
 
-restart_btn.addEventListener('click',()=>{
+function restart_squares(){
     game_over_container.style.animation = 'hideMSG .3s both'
     equal_total = 0;
     Restart();
-   
-})
+}
+restart_btn.addEventListener('click',restart_squares);
+
 
 
 function Restart(){
     for(var i=0; i<squares.length; i++){
         squares[i].style.transform = 'none';
-        squares[i].removeChild(squares[i].children[1]);
+    
+        if(squares[i].hasChildNodes()) {
+            squares[i].removeChild(squares[i].children[1]);
+        }
        
     }
     
