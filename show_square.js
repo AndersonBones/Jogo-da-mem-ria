@@ -21,17 +21,17 @@ function Set_square(){
         }
         
         if(Flip == true){
-            players.push(this);
+            players.push(this); // armazena os squares sem icones
         }
         
     }
 
     if(this.style.transform != 'rotateY(180deg)'){
-        Show_square(players);        
+        Show_square(players); // mostra os icones dos squares
     }
 
 
-    if(players.length == 2){
+    if(players.length == 2){ // armazena apenas dois squares por vez
         players = [];
     }
     
@@ -40,17 +40,17 @@ function Set_square(){
 function Show_square(players){
 
 
-    if(Flip == true){
-        players[players.length-1].style.transform = 'rotateY(180deg)';
+    if(Flip == true){ // se o icone do square atual estiver escondido
+        players[players.length-1].style.transform = 'rotateY(180deg)'; // mostra o icone do square
     }
     
-    if(players.length == 2){
-        Check_equality(players);
+    if(players.length == 2){ 
+        Check_equality(players); // checa a igualdade de cada par de squares
     }
 
     if(players.length > 1){
         if(players[1].style.transform == 'rotateY(180deg)'){
-            Hide_square(players)
+            Hide_square(players) // Esconde os icones dos dois squares
         }
     }
 }
@@ -61,13 +61,14 @@ function Hide_square(players){
 
     setTimeout(()=>{
 
-        if(Equal == false){
+        if(Equal == false){ // volta a esconder os icones dos dois squares se ambos não forem iguais.
             players[0].style.transform = 'none';
             players[1].style.transform = 'none';
         }
         
-        if(players[0].style.transform == 'none' && players[1].style.transform == 'none' || Equal == true){
-            Flip = true;    
+        if(players[0].style.transform == 'none' && players[1].style.transform == 'none' || Equal == true){ // caso os icones dos dois squares estiverem escondidos
+                                                                                                           // ou forem iguais
+            Flip = true; // permite mostar mais dois squares
         }
     }, 1000)
 
@@ -79,7 +80,7 @@ function Check_equality(players){
     let player1 = players[0];
     let player2 = players[1];
 
-    if(player1.children[1].classList.value == player2.children[1].classList.value){
+    if(player1.children[1].classList.value == player2.children[1].classList.value){ // se os icones dos dois squares forem iguais
         Equal = true;
         equal_total+=1;
     }
@@ -89,7 +90,7 @@ function Check_equality(players){
         Equal = false;
     }
 
-    Game_over(equal_total);
+    Game_over(equal_total); // game over
 }
 
 
@@ -99,7 +100,7 @@ function Game_over(total){
         var game_over = document.querySelector('.game_over');
 
         setTimeout(()=>{
-            game_over.style.animation = 'showMSG .3s both';
+            game_over.style.animation = 'showMSG .3s both'; // Abre a tela de Game Over
         }, 1000)
         
     }
