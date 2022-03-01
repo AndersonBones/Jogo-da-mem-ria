@@ -16,7 +16,7 @@ document.body.appendChild(game_over_container);
 function Restart_Animation(){ // Fecha a tela de Game Over
     game_over_container.style.animation = 'hideMSG .3s both'
     equal_total = 0;
-    Restart();
+    Restart_Game();
 }
 restart_btn.addEventListener('click',Restart_Animation);
 
