@@ -75,4 +75,3 @@ function Set_squares(icons, squares){
     }
     
 }
-
